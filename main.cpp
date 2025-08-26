@@ -10,6 +10,7 @@ using namespace std;
    5. Yan Cesar Huallpa Torres 
    6. Fernando Palomino Holgado
    7. Andres Alexander Mayorca Yucra
+   8. Xingbeck Caceres  Asto 
 */
 int main(){
     cout << "Hello CS-UNI" << endl;
