@@ -5,7 +5,7 @@ using namespace std;
 /* Revisado por:
    1. Ernesto Cuadros-Vargas
    2. Manuel Arce
-  
+   3. Anthonella Fernanda Vegas Villalva
 */
 int main(){
     cout << "Hello CS-UNI" << endl;
