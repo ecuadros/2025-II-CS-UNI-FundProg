@@ -4,7 +4,7 @@ using namespace std;
 
 /* Revisado por:
    1. Ernesto Cuadros-Vargas
-   2. Aldo Aguilar-Alva
+   2. Aldo Jose Aguilar-Alva
 */
 int main(){
     cout << "Hello CS-UNI" << endl;
