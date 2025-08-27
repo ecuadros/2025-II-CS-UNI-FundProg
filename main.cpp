@@ -17,18 +17,31 @@ using namespace std;
 // Forma #2 de Compilar (requiere el archivo Makefile)
 // make
 
-// int main(){
-//     cout << "Hello CS-UNI" << endl;
-//     return 0;
-// }
-
-int main(int nArgs, char *pArgs[]){
-    cout << "Hello Alg y EDA-UNI (forma #2)" << endl;
-    int i;
-    for(i = 0 ; i < nArgs ; ++i){
-        cout << pArgs[i] << endl;
-    }
+int main(){
+    cout << "Hello CS-UNI" << endl;
+    return 0;
 }
 
+// Forma #2: sirve para recibir parametros por linea de comando.
+// int main(int nArgs, char *pArgs[]){
+//     cout << "Hello Alg y EDA-UNI (forma #2)" << endl;
+//     int i;
+//     for(i = 0 ; i < nArgs ; ++i){
+//         cout << pArgs[i] << endl;
+//     }
+// }
 
+// Forma #3: sirve para recibir parametros por linea de comando y
+//           para recibir las varoables de entorno
+// int main(int nArgs, char *pArgs[], char *pEnv[]){
+//     cout << "Hello Alg y EDA-UNI (forma #2)" << endl;
+//     int i;
+//     cout << "Parametros:" << endl;
+//     for(i = 0 ; i < nArgs ; ++i)
+//         cout << "\t" << pArgs[i] << endl;
+    
+//     cout << "Variables de entorno:" << endl;
+//     for(i = 0 ; pEnv[i] != nullptr ; ++i)
+//         cout << "\t" << pEnv[i] << endl;
+// }
 
