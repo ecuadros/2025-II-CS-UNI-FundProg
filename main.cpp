@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "funcion.h"
 using namespace std;
 
 /* Revisado por:
@@ -19,6 +19,9 @@ using namespace std;
 
 int main(){
     cout << "Hello CS-UNI" << endl;
+    int a, b=5, c=8;
+    a = test(b, c);
+    cout << "a=" << a << endl;
     return 0;
 }
 
