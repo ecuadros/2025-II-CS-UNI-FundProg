@@ -12,8 +12,23 @@ using namespace std;
    7. Andres Alexander Mayorca Yucra
    8. Xingbeck Caceres  Asto 
 */
+// Forma 1 de Compilar: 
+// g++ -std=c++17 -Wall -g -pthread -o main main.cpp
+// Forma #2 de Compilar (requiere el archivo Makefile)
+// make
 
-int main(){
-    cout << "Hello CS-UNI" << endl;
-    return 0;
+// int main(){
+//     cout << "Hello CS-UNI" << endl;
+//     return 0;
+// }
+
+int main(int nArgs, char *pArgs[]){
+    cout << "Hello Alg y EDA-UNI (forma #2)" << endl;
+    int i;
+    for(i = 0 ; i < nArgs ; ++i){
+        cout << pArgs[i] << endl;
+    }
 }
+
+
+
