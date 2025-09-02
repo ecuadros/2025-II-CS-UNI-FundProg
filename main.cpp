@@ -11,7 +11,7 @@ using namespace std;
    6. Fernando Palomino Holgado
    7. Andres Alexander Mayorca Yucra
    8. Xingbeck Caceres  Asto 
-*/
+   9. Joshua Jesus Joseph Montes Cruz
 // Forma 1 de Compilar: 
 // g++ -std=c++17 -Wall -g -pthread -o main main.cpp
 // Forma #2 de Compilar (requiere el archivo Makefile)
