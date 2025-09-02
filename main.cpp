@@ -11,7 +11,9 @@ using namespace std;
    6. Fernando Palomino Holgado
    7. Andres Alexander Mayorca Yucra
    8. Xingbeck Caceres  Asto  
-   15. Marco Antonio Choque Vilca
+   9. Francesco Renan Piccone Tejada
+   10. Marco Antonio Choque Vilca
+   11. Fred Camacho Olarte
 */
 // Forma 1 de Compilar: 
 // g++ -std=c++17 -Wall -g -pthread -o main main.cpp
