@@ -10,8 +10,9 @@ using namespace std;
    5. Yan Cesar Huallpa Torres 
    6. Fernando Palomino Holgado
    7. Andres Alexander Mayorca Yucra
-   8. Xingbeck Caceres  Asto
+   8. Xingbeck Caceres  Asto  
    9. Francesco Renan Piccone Tejada
+   10. Marco Antonio Choque Vilca
    11. Fred Camacho Olarte
 */
 // Forma 1 de Compilar: 
