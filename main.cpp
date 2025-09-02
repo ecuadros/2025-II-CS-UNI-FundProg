@@ -10,8 +10,11 @@ using namespace std;
    5. Yan Cesar Huallpa Torres 
    6. Fernando Palomino Holgado
    7. Andres Alexander Mayorca Yucra
-   8. Xingbeck Caceres  Asto 
+   8. Xingbeck Caceres  Asto  
    9. Ruiz Romero Fabrizzio Roberto
+   10. Francesco Renan Piccone Tejada
+   11. Marco Antonio Choque Vilca
+   12. Fred Camacho Olarte
 */
 // Forma 1 de Compilar: 
 // g++ -std=c++17 -Wall -g -pthread -o main main.cpp
