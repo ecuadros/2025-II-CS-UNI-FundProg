@@ -1,5 +1,9 @@
 #include <iostream>
 #include "funcion.h"
+#include "parametros.h"
+#include "sorting.h"
+
+
 using namespace std;
 
 /* Revisado por:
@@ -17,15 +21,14 @@ using namespace std;
    12. Fred Camacho Olarte
 */
 // Forma 1 de Compilar: 
-// g++ -std=c++17 -Wall -g -pthread -o main main.cpp
+// g++ -std=c++17 -Wall -g -pthread -o main main.cpp sorting.cpp
 // Forma #2 de Compilar (requiere el archivo Makefile)
 // make
 
 int main(){
     cout << "Hello CS-UNI" << endl;
-    int a, b=5, c=8;
-    a = test(b, c);
-    cout << "a=" << a << endl;
+    DemoParametros();
+    // DemoSorting();
     return 0;
 }
 
