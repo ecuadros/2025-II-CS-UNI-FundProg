@@ -3,14 +3,17 @@
 #include <string>
 
 using namespace std;
-using NameType = string;
-using DocType  = enum {DocTypeNone, DocTypePassport, DocTypeDNI, DocTypeCE};
 
-using SalaryType = double;
+using ContainerElemType = string;
 
-using StudentCode = string;
-using OfficeType = string;
+// using NameType = string;
+// using DocType  = enum {DocTypeNone, DocTypePassport, DocTypeDNI, DocTypeCE};
 
-using ContainerElemType = int;
+// using SalaryType = double;
+
+// using StudentCode = string;
+// using OfficeType = string;
+
+
 
 #endif // __TYPES_H__

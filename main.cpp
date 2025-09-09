@@ -2,7 +2,7 @@
 #include "funcion.h"
 #include "parametros.h"
 #include "sorting.h"
-
+#include "array.h"
 
 using namespace std;
 
@@ -27,8 +27,9 @@ using namespace std;
 
 int main(){
     cout << "Hello CS-UNI" << endl;
-    DemoParametros();
+    // DemoParametros();
     // DemoSorting();
+    DemoArrays();
     return 0;
 }
 

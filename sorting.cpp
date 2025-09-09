@@ -4,6 +4,15 @@
 
 using namespace std;
 
+// ContainerElemType arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
+ContainerElemType arr[] = {"Hola", "que", "tal", "como", "estas", "yo", "bien", "hasta", "luego", "amigo"};
+    
+void intercambiar(ContainerElemType &a, ContainerElemType &b){
+    ContainerElemType tmp = a;
+    a = b;
+    b = tmp;
+}
+
 // Bubble  
 void BurbujaClasico(ContainerElemType* arr, ContainerRange n, CompFunc pComp) {
     if (n <= 1)
@@ -29,7 +38,6 @@ void BurbujaRecursivo(ContainerElemType* arr, ContainerRange n, CompFunc pComp) 
 
 void DemoBurbuja(){
     cout << "DemoBurbuja \n";
-    ContainerElemType arr[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
     auto n = sizeof(arr) / sizeof(arr[0]);
 
     BurbujaRecursivo(arr, n, &Mayor);
@@ -68,7 +76,6 @@ void QuickSort(ContainerElemType* arr, ContainerRange first, ContainerRange last
 
 void DemoQuickSort() {
     cout << "DemoQuickSort \n";
-    ContainerElemType arr[] = {5, 2, 8, 15, 1, 9, 4, 7, 3, 6};
     auto n = sizeof(arr) / sizeof(arr[0]);
 
     QuickSort(arr, 0, n - 1, &Mayor);
@@ -149,7 +156,6 @@ void MergeSort( ContainerElemType* arr,
 
 void DemoMergeSort(){
     cout << "DemoMergeSort" << endl;
-    ContainerElemType arr[] = {5, 2, 8, 1, 15, 9, 4, 7, 3, 6};
     auto n = sizeof(arr) / sizeof(arr[0]);
 
     MergeSort(arr, 0, n-1, &Mayor);
