@@ -66,11 +66,13 @@ ContainerRange particionar(ContainerElemType* arr, ContainerRange first, Contain
 }
 
 
-void QuickSort(ContainerElemType* arr, ContainerRange first, ContainerRange last, CompFunc pComp) {
+void QuickSort( ContainerElemType* arr, 
+                ContainerRange first, 
+                ContainerRange last, CompFunc pComp) {
     if (first < last) {
-        auto pi = particionar(arr, first, last, pComp);
-        QuickSort(arr, first, pi - 1, pComp);
-        QuickSort(arr, pi + 1, last, pComp);
+        auto pivot = particionar(arr, first, last, pComp);
+        QuickSort(arr, first, pivot - 1, pComp);
+        QuickSort(arr, pivot + 1, last, pComp);
     }
 }
 

@@ -5,6 +5,8 @@
 using namespace std;
 
 using ContainerElemType = string;
+using BigNumber      = long;
+using PositiveNumber = int;
 
 // using NameType = string;
 // using DocType  = enum {DocTypeNone, DocTypePassport, DocTypeDNI, DocTypeCE};

@@ -3,6 +3,7 @@
 #include "parametros.h"
 #include "sorting.h"
 #include "array.h"
+#include "recursion.h"
 
 using namespace std;
 
@@ -29,7 +30,9 @@ int main(){
     cout << "Hello CS-UNI" << endl;
     // DemoParametros();
     // DemoSorting();
-    DemoArrays();
+    // DemoArrays();
+    DemoRecursion();
+    VariablesCapacity();
     return 0;
 }
 
