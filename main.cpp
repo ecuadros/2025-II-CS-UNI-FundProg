@@ -5,6 +5,7 @@
 #include "array.h"
 #include "recursion.h"
 #include "const.h"
+#include "matrix.h"
 
 using namespace std;
 
@@ -35,6 +36,7 @@ int main(){
     // DemoRecursion();
     // VariablesOverflow();
     // DemoConst();
+    DemoMatrixes();
     return 0;
 }
 

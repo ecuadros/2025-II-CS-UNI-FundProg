@@ -4,7 +4,8 @@ LDFLAGS = -pthread # Añadido -pthread
 
 TARGET = main
 SRCS =  main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
-		array.cpp sorting.cpp \
+		array.cpp matrix.cpp \
+		sorting.cpp \
 		recursion.cpp \
 		const.cpp
 OBJS = $(SRCS:.cpp=.o)
