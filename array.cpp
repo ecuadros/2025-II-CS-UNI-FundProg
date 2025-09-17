@@ -1,14 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include "array.h"
-#include "sorting.h"
 
 using namespace std;
-
-struct SArray{
-    ContainerElemType     *pArray = nullptr;
-    size_t nElem  = 0;
-};
 
 void CreateArray(ContainerElemType *&pArray, size_t n){
     pArray = new ContainerElemType [n]; // Pido memoria para n elementos de tipo T
@@ -38,8 +32,8 @@ void DestroyArray(ContainerElemType *&pArray){
 void DemoArrays(){
     ContainerElemType *pV1 = nullptr;
     size_t nElem1 = 0;
-    // ContainerElemType *pV2 = nullptr;
-    // size_t nElem2 = 0;
+    ContainerElemType *pV2 = nullptr;
+    size_t nElem2 = 0;
 
     cout << "Ingrese tamano del array:";
     cin >> nElem1;
@@ -48,30 +42,25 @@ void DemoArrays(){
     CreateArray(pV1, nElem1);
     // Ingresar los valores
     ReadArray(pV1, nElem1);
-    BurbujaClasico(pV1, nElem1, &Mayor);
-    PrintArray(pV1, nElem1, cout);
-    BurbujaClasico(pV1, nElem1, &Menor);
-    PrintArray(pV1, nElem1, cout);
-    
     // Imprimir los valores ingresados
     ofstream of1("test.txt");
-    of1 << "Los valores ingresados son:" << endl;
+    cout << "Los valores ingresados son:" << endl;
     PrintArray(pV1, nElem1, of1);
     of1.close();
     PrintArray(pV1, nElem1, cout);
     // Eliminar la memoria
     DestroyArray(pV1);
 
-    // cout << "Ingrese tamano del array:";
-    // cin >> nElem2;
-    // // Crear el vector
-    // CreateArray(pV2, nElem2);
-    // // Ingresar los valores
-    // ReadArray(pV2, nElem2);
-    // // Imprimir los valores ingresados
-    // // ofstream of2("prueba2.txt");
-    // // PrintArray(pV2, nElem2, of2);
-    // // of2.close();
-    // // Eliminar la memoria
-    // DestroyArray(pV2);
+    cout << "Ingrese tamano del array:";
+    cin >> nElem2;
+    // Crear el vector
+    CreateArray(pV2, nElem2);
+    // Ingresar los valores
+    ReadArray(pV2, nElem2);
+    // Imprimir los valores ingresados
+    ofstream of2("prueba2.txt");
+    PrintArray(pV2, nElem2, of2);
+    of2.close();
+    // Eliminar la memoria
+    DestroyArray(pV2);
 }

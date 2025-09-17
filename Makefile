@@ -1,11 +1,12 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -g -pthread # Añadido -pthread
+CXXFLAGS = -std=c++17 -Wunused-variable -g -pthread # Añadido -pthread
 LDFLAGS = -pthread # Añadido -pthread
 
 TARGET = main
 SRCS =  main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		array.cpp sorting.cpp \
-		recursion.cpp
+		recursion.cpp \
+		const.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)

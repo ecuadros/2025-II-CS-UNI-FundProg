@@ -8,6 +8,6 @@ long factorial_recursivo(int n);
 long factorial_iterativo(int n);
 
 void DemoRecursion();
-void VariablesCapacity();
+void VariablesOverflow();
 
 #endif // __RECURSION_H__

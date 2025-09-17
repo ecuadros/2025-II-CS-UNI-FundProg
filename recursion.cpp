@@ -60,7 +60,7 @@ void DemoRecursion(){
     }
 }
 
-void VariablesCapacity(){
+void VariablesOverflow(){
     unsigned char uc = 163;
     char sc = 100; sc += 63;
     std::cout << "uc: " << uc << std::endl;
