@@ -31,5 +31,15 @@ void DemoStructs(){
     Print(pAlu);
     Print(*pAlu);
 
+    pAlu = new Alu[5];
+
+    pAlu[0].dni = 24680;
+    pAlu[0].fecnac.dd = 25;
+    Print(&pAlu[0]);
+    Print(pAlu);
+
+    Print(&pAlu[2]);
+
     
+    delete [] pAlu;
 }

@@ -33,12 +33,12 @@ int main(){
     cout << "Hello CS-UNI" << endl;
     // DemoParametros();
     // DemoSorting();
-    // DemoArrays();
+    DemoArrays();
     // DemoRecursion();
     // VariablesOverflow();
     // DemoConst();
     // DemoMatrixes();
-    DemoStructs();
+    // DemoStructs();
     return 0;
 }
 
