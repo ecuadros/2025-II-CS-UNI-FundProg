@@ -6,6 +6,7 @@
 #include "recursion.h"
 #include "const.h"
 #include "matrix.h"
+#include "structs.h"
 
 using namespace std;
 
@@ -36,7 +37,8 @@ int main(){
     // DemoRecursion();
     // VariablesOverflow();
     // DemoConst();
-    DemoMatrixes();
+    // DemoMatrixes();
+    DemoStructs();
     return 0;
 }
 

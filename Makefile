@@ -7,7 +7,8 @@ SRCS =  main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		array.cpp matrix.cpp \
 		sorting.cpp \
 		recursion.cpp \
-		const.cpp
+		const.cpp \
+		structs.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)
