@@ -7,6 +7,7 @@
 #include "const.h"
 #include "matrix.h"
 #include "structs.h"
+#include "BinaryFiles.h"
 
 using namespace std;
 
@@ -33,12 +34,13 @@ int main(){
     cout << "Hello CS-UNI" << endl;
     // DemoParametros();
     // DemoSorting();
-    DemoArrays();
+    // DemoArrays();
     // DemoRecursion();
     // VariablesOverflow();
     // DemoConst();
     // DemoMatrixes();
     // DemoStructs();
+    DemoBinaryFiles();
     return 0;
 }
 
