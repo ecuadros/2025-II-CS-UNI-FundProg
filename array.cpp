@@ -1,60 +1,41 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "array.h"
 
 using namespace std;
 
-void CreateArray(ContainerElemType *&pArray, size_t n){
-    pArray = new ContainerElemType [n]; // Pido memoria para n elementos de tipo T
-}
-
-void ReadArray(ContainerElemType *pArray, size_t n){
-    cout << "Leyendo " << n << " elementos ..." << endl;
-    for(size_t i = 0 ; i < n ; ++i){
-        cout << "Ingresar v[" << i << "]: ";
-        cin  >> pArray[i];
-    }
-}
-
-void DestroyArray(ContainerElemType *&pArray){
-    cout << "Liberando la memoria asignada" << endl;
-    delete [] pArray;    // Liberar la memoria
-    pArray = nullptr;
-}
-
 // Version programacion estructurada ... todavia reprobada
 void DemoArrays(){
-    ContainerElemType *pV1 = nullptr;
     size_t nElem1 = 0;
-    ContainerElemType *pV2 = nullptr;
     size_t nElem2 = 0;
 
     cout << "Ingrese tamano del array:";
     cin >> nElem1;
 
     // Crear el vector
-    CreateArray(pV1, nElem1);
+    CVector<int> v1(nElem1);
+
     // Ingresar los valores
-    ReadArray(pV1, nElem1);
+    v1.ReadArray(cin, cout);
     // Imprimir los valores ingresados
-    ofstream of1("test.txt");
+    ofstream of1("test-int.txt");
     cout << "Los valores ingresados son:" << endl;
-    PrintArray(pV1, nElem1, of1);
+    v1.PrintArray(of1);
     of1.close();
-    PrintArray(pV1, nElem1, cout);
-    // Eliminar la memoria
-    DestroyArray(pV1);
+
+    v1.PrintArray(cout);
 
     cout << "Ingrese tamano del array:";
     cin >> nElem2;
     // Crear el vector
-    CreateArray(pV2, nElem2);
+    CVector<string> v2(nElem2);
     // Ingresar los valores
-    ReadArray(pV2, nElem2);
+    v2.ReadArray(cin, cout);
     // Imprimir los valores ingresados
-    ofstream of2("prueba2.txt");
-    PrintArray(pV2, nElem2, of2);
+    ofstream of2("test-string.txt");
+    v2.PrintArray(of2);
+    v2.PrintArray(cout);
+    
     of2.close();
-    // Eliminar la memoria
-    DestroyArray(pV2);
 }

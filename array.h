@@ -5,15 +5,41 @@
 using namespace std;
 
 template <typename T>
-void PrintArray(T *pArray, size_t n, ostream &os){
-    for(size_t i = 0 ; i < n ; ++i)
-        os << pArray[i] << " ";
-    os << endl;
-}
-// TODO: pasar estas 3 funciones a templates
-void CreateArray(ContainerElemType *&pArray, size_t n);
-void ReadArray(ContainerElemType *pArray, size_t n);
-void DestroyArray(ContainerElemType *&pArray);
+class CVector{
+private:
+    T *m_pArray;
+    size_t m_size;
+public:
+    CVector(size_t n) : m_size(n){
+        CreateArray();
+    }
+    ~CVector(){
+        DestroyArray();
+    }
+    void CreateArray(){
+        m_pArray = new T [m_size]; // Pido memoria para n elementos de tipo T
+    }
+
+    void ReadArray(istream &is, ostream &os){
+        os << "Leyendo " << m_size << " elementos ..." << endl;
+        for(size_t i = 0 ; i < m_size ; ++i){
+            os << "Ingresar v[" << i << "]: ";
+            is  >> m_pArray[i];
+        }
+    }
+
+    void PrintArray(ostream &os){
+        for(size_t i = 0 ; i < m_size ; ++i)
+            os << m_pArray[i] << " ";
+        os << endl;
+    }
+
+    void DestroyArray(){
+        // cout << "Liberando la memoria asignada" << endl;
+        delete [] m_pArray;    // Liberar la memoria
+        m_pArray = nullptr;
+    }
+};
 
 void DemoArrays();
 

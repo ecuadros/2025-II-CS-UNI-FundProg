@@ -5,7 +5,6 @@ LDFLAGS =
 TARGET = main
 SRCS = main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		array.cpp matrix.cpp \
-		sorting.cpp \
 		recursion.cpp \
 		const.cpp \
 		structs.cpp \
@@ -15,6 +14,7 @@ SRCS = main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		academic/person.cpp \
 		academic/student.cpp academic/professor.cpp \
 		academic/DemoAcademic.cpp
+# 		sorting.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(OBJS:.o=.d)
