@@ -4,23 +4,23 @@
 
 using namespace std;
 
-void CreateArray(ContainerElemType *&pArray, size_t n){
-    pArray = new ContainerElemType [n]; // Pido memoria para n elementos de tipo T
-}
+// void CreateArray(ContainerElemType *&pArray, size_t n){
+//     pArray = new ContainerElemType [n]; // Pido memoria para n elementos de tipo T
+// }
 
-void ReadArray(ContainerElemType *pArray, size_t n){
-    cout << "Leyendo " << n << " elementos ..." << endl;
-    for(size_t i = 0 ; i < n ; ++i){
-        cout << "Ingresar v[" << i << "]: ";
-        cin  >> pArray[i];
-    }
-}
+// void ReadArray(ContainerElemType *pArray, size_t n){
+//     cout << "Leyendo " << n << " elementos ..." << endl;
+//     for(size_t i = 0 ; i < n ; ++i){
+//         cout << "Ingresar v[" << i << "]: ";
+//         cin  >> pArray[i];
+//     }
+// }
 
-void DestroyArray(ContainerElemType *&pArray){
-    cout << "Liberando la memoria asignada" << endl;
-    delete [] pArray;    // Liberar la memoria
-    pArray = nullptr;
-}
+// void DestroyArray(ContainerElemType *&pArray){
+//     cout << "Liberando la memoria asignada" << endl;
+//     delete [] pArray;    // Liberar la memoria
+//     pArray = nullptr;
+// }
 
 // Version programacion estructurada ... todavia reprobada
 void DemoArrays(){

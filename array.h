@@ -10,10 +10,27 @@ void PrintArray(T *pArray, size_t n, ostream &os){
         os << pArray[i] << " ";
     os << endl;
 }
-// TODO: pasar estas 3 funciones a templates
-void CreateArray(ContainerElemType *&pArray, size_t n);
-void ReadArray(ContainerElemType *pArray, size_t n);
-void DestroyArray(ContainerElemType *&pArray);
+
+template <typename T>
+void CreateArray(T*&pArray, size_t n){
+    pArray = new T[n];
+}
+
+template <typename T>
+void ReadArray(T *pArray, size_t n){
+    cout << "Leyendo " << n << " elementos ..." << endl;
+    for(size_t i = 0 ; i < n ; ++i){
+        cout << "Ingresar v[" << i << "]: ";
+        cin  >> pArray[i]; //considerar getline(cin,..) si elementos del array son frases
+    }
+}
+
+template <typename T>
+void DestroyArray(T *&pArray){
+    cout << "Liberando la memoria asignada" << endl;
+    delete[] pArray;
+    pArray = nullptr;
+}
 
 void DemoArrays();
 

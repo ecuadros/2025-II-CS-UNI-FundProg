@@ -5,11 +5,40 @@
 // #include "general/types.h"
 using namespace std;
 
-// TODO: Convertir estas 4 funciones en templates
-void CreateMatrix(ContainerElemType **&pMatrix, size_t rows, size_t cols);
-void ReadMatrix(ContainerElemType *pMatrix, size_t rows, size_t cols);
-void PrintMatrix(ContainerElemType *pMatrix, size_t rows, size_t cols, ostream &os);
-void DestroyMatrix(ContainerElemType *&pMatrix, size_t rows);
+template <typename T>
+void CreateMatrix(T **&pMatrix, size_t rows, size_t cols){
+    pMatrix = new T*[rows]; 
+        for(size_t i = 0 ; i < rows ; ++i)
+            pMatrix[i] = new T[cols];
+}
+
+template <typename T>
+void ReadMatrix(T **pMatrix, size_t rows, size_t cols){
+    cout << "Leyendo " << rows << "*" << cols << " elementos ..." << endl;
+    for(size_t i = 0 ; i < rows ; ++i)
+        for(size_t j = 0 ; j < cols ; ++j){
+            cout << "Ingresar mat[" << i << "][" << j << "]=";
+            cin  >> pMatrix[i][j];
+        }
+}
+
+template <typename T>
+void PrintMatrix(T **pMatrix, size_t rows, size_t cols, ostream &os){
+     for(size_t i = 0 ; i < rows ; ++i){
+        for(size_t j = 0 ; j < cols ; ++j)
+            os << "mat[" << i << "][" << j << "]=" << pMatrix[i][j] << " ";
+        os << endl;
+    }
+}
+
+template <typename T>
+void DestroyMatrix(T **&pMatrix, size_t rows){
+    cout << "Liberando la memoria asignada" << endl;
+    for(size_t i = 0 ; i < rows ; ++i)
+        delete [] pMatrix[i];
+    delete [] pMatrix;    
+    pMatrix = nullptr;
+}
 
 void DemoMatrixes();
 
