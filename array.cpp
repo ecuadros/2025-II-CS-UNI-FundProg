@@ -21,10 +21,12 @@ void DemoArrays(){
     // Imprimir los valores ingresados
     ofstream of1("test-int.txt");
     cout << "Los valores ingresados son:" << endl;
+    v1[2] = 25;
     v1.PrintArray(of1);
     of1.close();
 
     v1.PrintArray(cout);
+    cout << "Array v1: " << v1 << endl;
 
     cout << "Ingrese tamano del array:";
     cin >> nElem2;
@@ -35,7 +37,8 @@ void DemoArrays(){
     // Imprimir los valores ingresados
     ofstream of2("test-string.txt");
     v2.PrintArray(of2);
+    v2[4] = "Ernesto";
     v2.PrintArray(cout);
-    
+    cout << "Array v2: " << v2 << endl;
     of2.close();
 }

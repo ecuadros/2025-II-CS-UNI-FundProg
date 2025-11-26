@@ -39,7 +39,17 @@ public:
         delete [] m_pArray;    // Liberar la memoria
         m_pArray = nullptr;
     }
+    T &operator[](size_t pos){
+        return m_pArray[pos];
+    }
 };
+
+template <typename T>
+ostream &operator<<(ostream &os, CVector<T> &v)
+{
+    v.PrintArray(os);
+    return os;
+}
 
 void DemoArrays();
 

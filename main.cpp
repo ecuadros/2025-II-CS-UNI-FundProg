@@ -11,6 +11,8 @@
 #include "complex.h"
 #include "academic/academic.h"
 #include "MoveObject.h"
+#include "variadic.h"
+#include "foreach.h"
 
 using namespace std;
 
@@ -37,7 +39,7 @@ int main(){
     cout << "Hello CS-UNI" << endl;
     // DemoParametros();
     // DemoSorting();
-    DemoArrays();
+    // DemoArrays();
     // DemoRecursion();
     // VariablesOverflow();
     // DemoConst();
@@ -48,6 +50,7 @@ int main(){
     // DemoComplex();
     // DemoAcademic();
     // DemoTemplates();
+    VariadicDemo();
     return 0;
 }
 
