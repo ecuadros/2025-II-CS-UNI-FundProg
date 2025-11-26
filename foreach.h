@@ -2,12 +2,12 @@
 #define __FOREACH_H__
 #include <iostream>
 
-template <typename Iterator, typename Function >
-void foreach(Iterator begin, Iterator end, Function func){
-    auto iter = begin;
-    for(; iter != end ; ++iter )
-        func( *iter );
-}
+// template <typename Iterator, typename Function >
+// void foreach(Iterator begin, Iterator end, Function func){
+//     auto iter = begin;
+//     for(; iter != end ; ++iter )
+//         func( *iter );
+// }
 
 // V1.0
 // template <typename Container, typename Func>
@@ -18,18 +18,20 @@ void foreach(Iterator begin, Iterator end, Function func){
 //         fn( *iter );
 // }
 
-// V1.1
-template <typename Container, typename Function>
-void foreach(Container &container, Function func){
-    foreach(container.begin(), container.end(), func);
-}
-
 // Variadic templates
 template<typename Iterator, typename Function, typename... Args>
 void foreach (Iterator begin, Iterator end,
-              Function func, Args const&... args){   
-    for (auto iter = begin; begin != end; ++iter)
-        std::invoke(func, *iter, args...);
+              Function func, Args &&... args){ 
+    for (auto iter = begin; iter != end; ++iter)  
+        func(*iter, std::forward<Args>(args)...);
+        //  std::invoke(func, *iter, args...);
+}
+
+// V1.1
+template <typename Container,
+          typename Function, typename... Args>
+void foreach(Container &container, Function func, Args &&... args){
+    foreach(container.begin(), container.end(), func, std::forward<Args>(args)...);
 }
 
 // template<typename Callable, typename... Args>
@@ -48,5 +50,23 @@ void foreach (Iterator begin, Iterator end,
 //       return ret;
 //     }
 // }
+
+template<typename T>
+void PrintElem(T &elem){
+    std::cout << elem << " ";
+}
+
+template<typename T>
+void AddOne(T &elem){
+    ++elem;
+}
+
+template<typename T>
+void AddX(T &elem, const T &delta){
+    elem = elem + delta;
+}
+
+
+void ForeachDemo();
 
 #endif // __FOREACH_H__

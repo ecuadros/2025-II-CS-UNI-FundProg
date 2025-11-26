@@ -51,6 +51,7 @@ int main(){
     // DemoAcademic();
     // DemoTemplates();
     VariadicDemo();
+    ForeachDemo();
     return 0;
 }
 

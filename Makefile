@@ -14,7 +14,8 @@ SRCS = main.cpp funcion.cpp parametros.cpp compareFunc.cpp \
 		academic/person.cpp \
 		academic/student.cpp academic/professor.cpp \
 		academic/DemoAcademic.cpp \
-		variadicDemo.cpp
+		variadicDemo.cpp \
+		ForeachDemo.cpp
 # 		sorting.cpp
 
 OBJS = $(SRCS:.cpp=.o)
