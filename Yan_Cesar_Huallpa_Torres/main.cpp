@@ -333,7 +333,6 @@ void deposito(){
     da_out.close();
 
     ofstream li("Libreta.dat", ios::binary | ios::app);
-    // [CAMBIADO] Usando sizeof(RegistroHistorial)
     strcpy(reg.dnif,dni);
     strcpy(reg.nombref,socios[ps].nombre);
     strcpy(reg.fechaf,movs[pm].fecha);
